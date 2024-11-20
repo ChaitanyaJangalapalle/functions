@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //greet
+        console.log("Greeting Function......");
+        a = prompt("enter your name:");
+        function hai() {
+            console.log("hello" + a)
+        }
+        hai()
+
+        //sum function
+        console.log("sum of numbers")
+        a = +prompt("enter first number");
+        b = +prompt("enter second number");
+        function sum() {
+            console.log(a + b)
+        }
+        sum(a, b)
+
+        //square
+        console.log("square of a number")
+
+        c = prompt("enter a number to square");
+        function square() {
+            console.log(c * c)
+        }
+        square()
+
+        //average
+
+        console.log("average of numbers")
+
+        function calAvg(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum / arr.length;
+        }
+
+        const arr = [2, 5, 2, 4, 2];
+        const average = calAvg(arr);
+        console.log("Average:", average);
+
+        //vowels
+        var str = prompt("enter a string");
+        function Vowels(str) {
+
+            const vowels = "aeiouAEIOU";
+            for (let i = 0; i < str.length; i++) {
+                if (vowels.includes(str[i])) {
+                    return "It contains vowels";
+                }
+            }
+            return "It doesn't contain vowels";
+        }
+        console.log(Vowels(str));
+
+        //tempareture
+
+        function convertTemperature(temp, scale) {
+            if (scale === "C") {
+                return (temp - 32) * 5 / 9;
+            } else if (scale === "F") {
+                return (temp * 9 / 5) + 32;
+            } 
+        }
+        console.log("32°F to Celsius:", convertTemperature(32, "C"));    
+        console.log("0°C to Fahrenheit:", convertTemperature(0, "F"));    
+        console.log("100°F to Celsius:", convertTemperature(100, "C"));   
+        console.log("37°C to Fahrenheit:", convertTemperature(37, "F"));  
+        
+
+
+    </script>
+</body>
+
+</html>
